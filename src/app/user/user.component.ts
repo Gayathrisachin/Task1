@@ -21,6 +21,7 @@ export class UserComponent implements OnInit {
   registerForm:FormGroup
   employee:User[]
   user:User
+  submitted: boolean = false;
 
   Departments: Departments[] = [
     {viewDepartment:"Admin"},
@@ -29,29 +30,32 @@ export class UserComponent implements OnInit {
     {viewDepartment:"Development"},
     {viewDepartment:"Testing"}
   ];
-  applicant: any;
+
 
   // updateDoB(dateObject){
   //   return dateObject.toLocaleDateString()
   //  }
-
+// close=this.dialogRef.close()
   date=new Date().toISOString()
   jsonDate=JSON.stringify(this.date).substring(0,10)
   constructor(private service:UserService,  public dialogRef: MatDialogRef<UserComponent>,private  dialog:  MatDialog, private  router:  Router,private formBuilder:FormBuilder) { }
-  hideModel() {
-    this.dialogRef.close("Closed");
-  }
+ hideModel(){
+   this.dialogRef.close();
+
+ }
   
     ngOnInit() {
+      // (document.querySelector('#table') as HTMLElement).style.display = 'none';
+
       this.registerForm= this.formBuilder.group({
     id:[''],
-        empId:['',Validators.required],
-     name: ['',[Validators.required,Validators.pattern('^[a-zA-Z ]*$'),Validators.maxLength(20)]],
-     
+       
+     name: ['',Validators.compose([Validators.required,Validators.pattern('^[a-zA-Z ]*$'),Validators.maxLength(20)])],
+     empId:['',Validators.required],
       dateOfJoin: [this.jsonDate, Validators.required],
       department:['', Validators.required],
       
-      email: ['',Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')],
+      email: ['',Validators.compose([Validators.required,Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])],
      
       });
       this.service.getUser().subscribe(data=>{
@@ -64,24 +68,22 @@ export class UserComponent implements OnInit {
     }
    
      createRegister() {
+       this.dialogRef.close()
+       this.submitted = true;
       if (this.registerForm.invalid) {
       return
       }
       else{
-     this.service.createUser(this.registerForm.value).subscribe(data=>{
-      (document.querySelector('.form') as HTMLElement).style.display = 'none';
 
-       (document.querySelector('#table') as HTMLElement).style.display = 'block';
-      //  e.preventDefault();
-     })
+     this.service.createUser(this.registerForm.value).subscribe(data=>{
+      // (document.querySelector('#table') as HTMLElement).style.display = 'block';
+
+// this.router.navigate(['home'])
+     });
+
     }
-    }
-    deleteEmployee(user: User): void {
-      this.service.deleteUser(user.id)
-        .subscribe( data => {
-          this.employee = this.employee.filter(u => u !== user);
-        })
-    };
+      
+  }
 
     clear(){
       this.registerForm.reset()

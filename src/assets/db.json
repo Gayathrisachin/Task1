@@ -1,188 +1,44 @@
 {
   "Users": [
     {
-      "id": 2,
+      "id": 48,
+      "empId": "1",
+      "name": "Gayatri",
+      "dateOfJoin": "2020-03-18",
+      "department": "Admin",
+      "email": "gayatri@gmail.com"
+    },
+    {
+      "id": 49,
       "empId": "2",
       "name": "Archana",
-      "dateOfJoin": "2020-03-02T18:30:00.000Z",
+      "dateOfJoin": "2020-03-02",
       "department": "HR",
       "email": "archana@gmail.com"
     },
     {
-      "id": 4,
+      "id": 50,
+      "empId": "3",
+      "name": "Anu",
+      "dateOfJoin": "2020-03-17",
+      "department": "IT Recriuter",
+      "email": "anu@gmail.com"
+    },
+    {
+      "id": 51,
       "empId": "4",
-      "name": "dfg",
-      "dateOfJoin": "2020-03-27T18:30:00.000Z",
-      "department": "HR",
-      "email": "qwd@sdf.com"
-    },
-    {
-      "id": 11,
-      "empId": "7",
-      "name": "fghjk",
-      "dateOfJoin": "2020-03-27T18:30:00.000Z",
+      "name": "Shalini",
+      "dateOfJoin": "2020-03-10",
       "department": "Admin",
-      "email": "gdfgh@sdfgh.ghj"
+      "email": "shali@gmail.com"
     },
     {
-      "id": 12,
-      "empId": "8",
-      "name": "ghjkl",
-      "dateOfJoin": "2020-03-27T18:30:00.000Z",
-      "department": "HR",
-      "email": "fghjkl@dfgh.com"
-    },
-    {
-      "id": 13,
-      "empId": "8",
-      "name": "dfghj",
-      "dateOfJoin": "2020-03-28T00:00:00.000Z",
-      "department": "HR",
-      "email": "fgh@ghjk.ghj"
-    },
-    {
-      "id": 14,
-      "empId": "9",
-      "name": "vbnm",
-      "dateOfJoin": "2020-03-20T00:00:00.000Z",
-      "department": "Admin",
-      "email": "fhj@dfghj.fghjk"
-    },
-    {
-      "id": 15,
-      "empId": "7",
-      "name": "gasdfgh",
-      "dateOfJoin": "2020-03-29T00:00:00.000Z",
-      "department": "Admin",
-      "email": "sdfg@dfghj.dfghj"
-    },
-    {
-      "id": 16,
-      "empId": "4",
-      "name": "dfghj",
-      "dateOfJoin": "2020-03-26T18:30:00.000Z",
-      "department": "HR",
-      "email": "dfghj@dfghj.dfgh"
-    },
-    {
-      "id": 17,
-      "empId": "1",
-      "name": "fghjkl",
-      "dateOfJoin": "2020-03-13T00:00:00.000Z",
-      "department": "HR",
-      "email": "sdfgh@dfghj.dfghj"
-    },
-    {
-      "id": 18,
+      "id": 52,
+      "name": "Deepak",
       "empId": "5",
-      "name": "dfghjk",
-      "dateOfJoin": "2020-03-14",
-      "department": "Admin",
-      "email": "sdfghj@sdfgh.fgh"
-    },
-    {
-      "id": 19,
-      "empId": "4",
-      "name": "fghjk",
-      "dateOfJoin": "2020-03-28T00:00:00.000Z",
-      "department": "HR",
-      "email": "dfgh@dfgh.com"
-    },
-    {
-      "id": 20,
-      "empId": "1",
-      "name": "fghjk",
-      "dateOfJoin": "2020-03-14T00:00:00.000Z",
-      "department": "Admin",
-      "email": "fghjk@sdfgh.dfgh"
-    },
-    {
-      "id": 21,
-      "empId": "7",
-      "name": "dfghj",
-      "dateOfJoin": "2020-03-26T00:00:00.000Z",
-      "department": "HR",
-      "email": "dfghj@dvbn.ghj"
-    },
-    {
-      "id": 22,
-      "empId": "7",
-      "name": "fghj",
-      "dateOfJoin": "2020-03-14T00:00:00.000Z",
-      "department": "HR",
-      "email": "fghj@dfg.com"
-    },
-    {
-      "id": 23,
-      "empId": "7",
-      "name": "vbn",
-      "dateOfJoin": "2020-03-28T00:00:00.000Z",
-      "department": "HR",
-      "email": "sdfgh@dfgh.cv"
-    },
-    {
-      "id": 24,
-      "empId": "7",
-      "name": "dfghj",
-      "dateOfJoin": "2020-03-22T00:00:00.000Z",
-      "department": "Admin",
-      "email": "sdfgh@dfgh.ghj"
-    },
-    {
-      "id": 25,
-      "empId": "7",
-      "name": "fghjk",
-      "dateOfJoin": "2020-03-28T00:00:00.000Z",
-      "department": "Admin",
-      "email": "dfghjk@fghj.com"
-    },
-    {
-      "id": 26,
-      "empId": "8",
-      "name": "dfghj",
-      "dateOfJoin": "2020-03-22T00:00:00.000Z",
-      "department": "HR",
-      "email": "dfgbn@fghj.ghj"
-    },
-    {
-      "id": 27,
-      "empId": "7",
-      "name": "dfghj",
-      "dateOfJoin": "2020-03-20T00:00:00.000Z",
-      "department": "Admin",
-      "email": "dfgh@dfgh.fghj"
-    },
-    {
-      "id": 28,
-      "empId": "7",
-      "name": "dfg",
-      "dateOfJoin": "2020-03-29T00:00:00.000Z",
-      "department": "Admin",
-      "email": "dfghnm@dfgh.ghjk"
-    },
-    {
-      "id": 29,
-      "empId": "7",
-      "name": "dfghj",
-      "dateOfJoin": "2020-03-22T00:00:00.000Z",
-      "department": "Admin",
-      "email": "fghj@fghj.com"
-    },
-    {
-      "id": 30,
-      "empId": "2",
-      "name": "cvbnm",
-      "dateOfJoin": "2020-03-28T00:00:00.000Z",
-      "department": "HR",
-      "email": "fghj@sdfgh.fghj"
-    },
-    {
-      "id": 31,
-      "empId": "1",
-      "name": "dfgh",
-      "dateOfJoin": "2020-03-29T00:00:00.000Z",
-      "department": "HR",
-      "email": "dfgh@ghj.fghj"
+      "dateOfJoin": "2020-03-11",
+      "department": "Development",
+      "email": "deepak@gmal.com"
     }
   ]
 }

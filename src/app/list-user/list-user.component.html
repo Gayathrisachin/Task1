@@ -1,5 +1,6 @@
-
-<table class="table table-striped">
+<div style="padding-top: 50px;overflow-x:auto;">
+  <h2 class="text-center">Employee List</h2>
+<table class="table">
   <thead>
   <tr>
    
@@ -20,7 +21,8 @@
     <td>{{emp.email}}</td>
     <td>{{emp.dateOfJoin}}</td>
 
-    <td><button class="btn btn-danger" (click)="deleteEmployee(emp)"> Delete</button>
+    <td><button class="btn btn-danger" (click)="deleteEmployee(emp)"> X</button>
   </tr>
   </tbody>
 </table>
+</div>

@@ -14,6 +14,7 @@ import {DataSource} from '@angular/cdk/collections';
 })
 export class ListUserComponent implements OnInit {
   employee:User[]
+  showDeletedMessage: boolean;
 
   // displayedColumns: string[] = ['name', 'empId', 'department', 'email','dateOfJoin','action'];
   // dataSource = new UserDataSource(this.service);
@@ -26,10 +27,14 @@ export class ListUserComponent implements OnInit {
     })
   }
   deleteEmployee(user: User): void {
+  
     this.service.deleteUser(user.id)
       .subscribe( data => {
         this.employee = this.employee.filter(u => u !== user);
+        // this.showDeletedMessage = true;
+        // setTimeout(() => this.showDeletedMessage = false, 3000);
       })
+    
   };
 
 }

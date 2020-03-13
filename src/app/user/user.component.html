@@ -1,11 +1,11 @@
 
   <div>
-        <form [formGroup]="registerForm" class="form" (ngSubmit)="createRegister()">
+        <form [formGroup]="registerForm" class="form" >
     
      
           <mat-form-field class="mat" appearance="outline">
              
-          <input formControlName="name" matInput placeholder="First Name">
+          <input formControlName="name" matInput placeholder="First Name" required>
           <span ><i class="fa-fa-user"></i></span>
           <mat-error *ngIf="hasError('name', 'pattern')">please enter characters only</mat-error>
           <mat-error *ngIf="hasError('name', 'maxLength')">Not more than 20 characters</mat-error>
@@ -15,7 +15,7 @@
      
    
           <mat-form-field class="mat" appearance="outline">
-            <input formControlName="empId" matInput placeholder="Employee Id">
+            <input formControlName="empId" matInput placeholder="Employee Id" required>
             <!-- <mat-error *ngIf="hasError('empId', 'pattern')">please enter characters only</mat-error> -->
           <mat-error *ngIf="hasError('empId', 'required')">This field is required</mat-error>
           
@@ -23,8 +23,8 @@
        
     
               <mat-form-field class="mat" appearance="outline">
-                <mat-label>Department</mat-label>
-                <mat-select formControlName="department" >
+                
+                <mat-select formControlName="department" placeholder="Department" >
                   <mat-option *ngFor="let dep of Departments" [value]="dep.viewDepartment">
                     {{dep.viewDepartment}} 
                   </mat-option>
@@ -41,23 +41,24 @@
 
           <mat-form-field class="mat" appearance="outline" >
             <!-- <mat-label>Date of Birth</mat-label> -->
-            <input matInput formControlName="dateOfJoin"
+            <input matInput type="date" formControlName="dateOfJoin"
             
-              [matDatepicker]="minmaxvalidation" 
-              placeholder="Date of Joining">
-            <mat-datepicker-toggle matSuffix [for]="minmaxvalidation">
-               </mat-datepicker-toggle>
+              placeholder="Date of Joining" required>
+            <!-- <mat-datepicker-toggle matSuffix [for]="minmaxvalidation">
+               </mat-datepicker-toggle> -->
             <mat-datepicker #minmaxvalidation></mat-datepicker>
             <mat-error *ngIf="hasError('dateOfJoin', 'required')">This field is required</mat-error>
           </mat-form-field>
    
     
     
-            <button mat-raised-button color="primary" type="button"  >Submit</button>
+            <button mat-raised-button color="primary" type="button" (click)="createRegister()" [disabled]="!this.registerForm.valid" >Submit</button>
+            
             <button mat-raised-button color="primary" type="button" (click)="clear()">Clear</button>
+            <button mat-raised-button color="warn"  (click)="hideModel()">Cancel</button>
 
        
         </form>
       </div>
-     <div id="table" style="display:none">   <app-list-user></app-list-user></div>
+     <div id="table" style="display:none"> <app-list-user></app-list-user></div>
   
