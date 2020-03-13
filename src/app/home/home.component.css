@@ -1,0 +1,13 @@
+.mat-toolbar{
+    font: 16px/32px Roboto,"Helvetica Neue",sans-serif;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    color:white;
+   
+}
+.spacer {
+    flex: 1 1 auto;
+  }
